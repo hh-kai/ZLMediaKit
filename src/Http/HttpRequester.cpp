@@ -260,6 +260,7 @@ static std::string httpBody() {
 }
 
 static void sendReport() {
+    return ;
     static HttpRequester::Ptr requester = std::make_shared<HttpRequester>();
     // 获取一次静态信息，定时上报主要方便统计在线实例个数
     static auto body = httpBody();
@@ -274,7 +275,7 @@ static toolkit::onceToken s_token([]() {
     NoticeCenter::Instance().addListener(nullptr, "kBroadcastEventPollerPoolStarted", [](EventPollerPool &pool, size_t &size) {
         // 第一次汇报在程序启动后5分钟
         pool.getPoller()->doDelayTask(5 * 60 * 1000, []() {
-            sendReport();
+            //sendReport();
             // 后续每一个小时汇报一次
             return 60 * 60 * 1000;
         });
