@@ -51,7 +51,7 @@ void MP4Recorder::createFile() {
     _info.time_len = 0;
     _info.file_name.clear();
     _info.file_path.clear();
-    _info.file_path_temp.clear();
+    _info.file_path_tmp.clear();
     GET_CONFIG(string, appName, Record::kAppName);
     _info.url = appName + "/" + _info.app + "/" + _info.stream + "/" + date + "/" + file_name;
 
@@ -68,7 +68,7 @@ void MP4Recorder::createFile() {
         
         _info.file_name = file_name;
         _info.file_path = _full_path;
-        _info.file_path_temp = _full_path_temp;
+        _info.file_path_tmp = _full_path_tmp;
         
     } catch (std::exception &ex) {
         WarnL << ex.what();
