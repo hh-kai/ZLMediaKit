@@ -330,6 +330,8 @@ extern const std::string kSampleMS;
 extern const std::string kFileBufSize;
 // mp4录制完成后是否进行二次关键帧索引写入头部
 extern const std::string kFastStart;
+// mp4 录制是否录制成fmp4
+extern const std::string kRecordFmp4;
 // mp4文件是否重头循环读取
 extern const std::string kFileRepeat;
 } // namespace Record

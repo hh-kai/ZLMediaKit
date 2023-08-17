@@ -285,6 +285,7 @@ const string kSampleMS = RECORD_FIELD "sampleMS";
 const string kFileBufSize = RECORD_FIELD "fileBufSize";
 const string kFastStart = RECORD_FIELD "fastStart";
 const string kFileRepeat = RECORD_FIELD "fileRepeat";
+const string kRecordFmp4 = RECORD_FIELD "recordFmp4";
 
 static onceToken token([]() {
     mINI::Instance()[kAppName] = "record";
@@ -292,6 +293,7 @@ static onceToken token([]() {
     mINI::Instance()[kFileBufSize] = 64 * 1024;
     mINI::Instance()[kFastStart] = false;
     mINI::Instance()[kFileRepeat] = false;
+    mINI::Instance()[kRecordFmp4] = true;
 });
 } // namespace Record
 
