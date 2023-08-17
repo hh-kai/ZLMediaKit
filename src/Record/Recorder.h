@@ -29,13 +29,14 @@ struct MediaTuple {
 
 class RecordInfo: public MediaTuple {
 public:
-    time_t start_time;  // GMT 标准时间，单位秒
-    float time_len;     // 录像长度，单位秒
-    off_t file_size;    // 文件大小，单位 BYTE
-    std::string file_path;   // 文件路径
-    std::string file_name;   // 文件名称
-    std::string folder;      // 文件夹路径
-    std::string url;         // 播放路径
+    time_t start_time;  	// GMT 标准时间，单位秒
+    float time_len;     	// 录像长度，单位秒
+    off_t file_size;    	// 文件大小，单位 BYTE
+    std::string file_path;   	// 文件路径
+    std::string file_path_temp; // 文件临时路径
+    std::string file_name;   	// 文件名称
+    std::string folder;      	// 文件夹路径
+    std::string url;         	// 播放路径
 };
 
 class Recorder{

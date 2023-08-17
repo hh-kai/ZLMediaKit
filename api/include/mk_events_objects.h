@@ -28,6 +28,8 @@ API_EXPORT float API_CALL mk_mp4_info_get_time_len(const mk_mp4_info ctx);
 API_EXPORT size_t API_CALL mk_mp4_info_get_file_size(const mk_mp4_info ctx);
 // 文件路径
 API_EXPORT const char* API_CALL mk_mp4_info_get_file_path(const mk_mp4_info ctx);
+// 文件临时路径
+API_EXPORT const char* API_CALL mk_mp4_info_get_file_path_temp(const mk_mp4_info ctx);
 // 文件名称
 API_EXPORT const char* API_CALL mk_mp4_info_get_file_name(const mk_mp4_info ctx);
 // 文件夹路径

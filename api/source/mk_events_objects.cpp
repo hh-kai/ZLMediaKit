@@ -46,6 +46,12 @@ API_EXPORT const char* API_CALL mk_mp4_info_get_file_path(const mk_mp4_info ctx)
     return info->file_path.c_str();
 }
 
+API_EXPORT const char* API_CALL mk_mp4_info_get_file_path_temp(const mk_mp4_info ctx){
+    assert(ctx);
+    RecordInfo *info = (RecordInfo *)ctx;
+    return info->file_path_temp.c_str();
+}
+
 API_EXPORT const char* API_CALL mk_mp4_info_get_file_name(const mk_mp4_info ctx){
     assert(ctx);
     RecordInfo *info = (RecordInfo *)ctx;

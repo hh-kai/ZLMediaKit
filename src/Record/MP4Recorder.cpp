@@ -47,8 +47,11 @@ void MP4Recorder::createFile() {
 
     /////record 业务逻辑//////
     _info.start_time = ::time(NULL);
-    _info.file_name = file_name;
-    _info.file_path = full_path;
+    _info.file_size = 0;
+    _info.time_len = 0;
+    _info.file_name.clear();
+    _info.file_path.clear();
+    _info.file_path_temp.clear();
     GET_CONFIG(string, appName, Record::kAppName);
     _info.url = appName + "/" + _info.app + "/" + _info.stream + "/" + date + "/" + file_name;
 
@@ -62,9 +65,16 @@ void MP4Recorder::createFile() {
         }
         _full_path_tmp = full_path_tmp;
         _full_path = full_path;
+        
+        _info.file_name = file_name;
+        _info.file_path = _full_path;
+        _info.file_path_temp = _full_path_temp;
+        
     } catch (std::exception &ex) {
         WarnL << ex.what();
     }
+    // 触发mp4录制开始事件
+    NoticeCenter::Instance().emitEvent(Broadcast::kBroadcastStartRecordMP4, _info);
 }
 
 void MP4Recorder::asyncClose() {
