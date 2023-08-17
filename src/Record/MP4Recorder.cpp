@@ -68,13 +68,13 @@ void MP4Recorder::createFile() {
         
         _info.file_name = file_name;
         _info.file_path = _full_path;
-        _info.file_path_tmp = _full_path_tmp;
-        
+        _info.file_path_tmp = _full_path_tmp;  
     } catch (std::exception &ex) {
         WarnL << ex.what();
     }
+    TraceL << "Mp4 start record event: " << _full_path;
     // 触发mp4录制开始事件
-    NoticeCenter::Instance().emitEvent(Broadcast::kBroadcastStartRecordMP4, _info);
+    NoticeCenter::Instance().emitEvent(Broadcast::kBroadcastStartRecordMP4, _info);   
 }
 
 void MP4Recorder::asyncClose() {

@@ -37,7 +37,7 @@ extern const std::string kBroadcastMediaChanged;
 
 // 录制mp4文件开始后广播 可以从这里获取是否录制成功
 extern const std::string kBroadcastStartRecordMP4;
-#define BroadcastStartRecordMP4Args const RecordInfo &startinfo
+#define BroadcastStartRecordMP4Args const RecordInfo &info
 
 // 录制mp4文件成功后广播
 extern const std::string kBroadcastRecordMP4;
