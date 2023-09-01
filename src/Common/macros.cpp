@@ -33,6 +33,6 @@ void Assert_Throw(int failed, const char *exp, const char *func, const char *fil
 
 namespace mediakit {
 
-const char kServerName[] = "JRMediaServer-3.0-build-"__DATE__"-"__TIME__";
+const char kServerName[] = "JRMediaServer-3.0-build-"__DATE__"-"__TIME__;
 
 }//namespace mediakit
