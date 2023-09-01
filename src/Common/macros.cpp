@@ -33,11 +33,6 @@ void Assert_Throw(int failed, const char *exp, const char *func, const char *fil
 
 namespace mediakit {
 
-//请遵循MIT协议，勿修改服务器声明
-#if !defined(ENABLE_VERSION)
-const char kServerName[] =  "ZLMediaKit-7.0(build in " __DATE__ " " __TIME__ ")";
-#else
-const char kServerName[] = "ZLMediaKit(git hash:" COMMIT_HASH "/" COMMIT_TIME ",branch:" BRANCH_NAME ",build time:" BUILD_TIME ")";
-#endif
+const char kServerName[] = "JRMediaServer-3.0-build-"__DATE__"-"__TIME__";
 
 }//namespace mediakit
